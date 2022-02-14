@@ -1,0 +1,45 @@
+- section:
+  name: 首頁
+  url: /index.html
+- section:
+  name: 影雲工作室
+  url: 'https://studio.support.brightcove.com/index.html'
+- section:
+  name: Brightcove播放器
+  url: 'https://player.support.brightcove.com/index.html'
+- section:
+  name: 視頻雲平台API
+  url: 'https://apis.support.brightcove.com/index.html'
+- section:
+  name: 視頻雲設備 SDK
+  url: 'https://apis.support.brightcove.com/index.html'
+- section:
+  name: 訓練
+  url: /training/index.html
+  docs:
+    - name: 所有在線培訓課程
+      url: /training/online-training-courses.html
+    - name: 註冊以講師指導的培訓
+      url: /training/register-training.html
+    - name: '訓練：視頻雲簡介'
+      url: /training/training-demand-introduction-video-cloud.html
+    - name: '訓練：視頻雲分析簡介'
+      url: /training/training-demand-introduction-video-cloud-analytics.html
+    - name: '訓練：視頻雲基礎'
+      url: /training/training-demand-video-cloud-basics.html
+    - name: Video Cloud Studio培訓視頻
+      url: /training/video-cloud-studio-training-videos.html
+    - name: Brightcove大學培訓課程
+      url: /training/brightcove-university.html
+- section:
+  name: '支持'
+  url: '/support/index.html'
+  docs:
+    - name: '查看 Brightcove 系統狀態頁面'
+      url: '/support/viewing-brightcove-system-status-page.html'
+    - name: '與銷售人員聯繫'
+      url: '/support/contact-sales.html'
+    - name: '打開支持案例'
+      url: '/support/opening-case-with-brightcove-support.html'
+    - name: '重置您的支持門戶密碼'
+      url: '/support/reset-support-portal-password.html'
