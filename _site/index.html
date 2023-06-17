@@ -1,491 +1,927 @@
-﻿<!doctype html>
+﻿<!DOCTYPE html>
 <html lang="zh-TW">
+    <head>
+        <title>布萊特灣文件</title>
+        
+        <!-- Meta -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <link rel="apple-touch-icon" sizes="180x180" href="/assets/s-site-assets-favicons/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/assets/s-site-assets-favicons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/assets/s-site-assets-favicons/favicon-16x16.png">
+        <link rel="manifest" href="/assets/s-site-assets-favicons/site.webmanifest">  
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  
-  <title>布萊特灣文件</title>
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="manifest" href="/site.webmanifest">  
-  <link data-react-helmet="true" rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500&amp;display=swap">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/prism.css">
-  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/styles.css">
-  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/landing-page.css">
-  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/tabs.css">
-  <link rel="stylesheet" href="/assets/css/local.css">
-  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/381443caa8.js" crossorigin="anonymous"></script>
-  <script src="https://support.brightcove.com/site-assets/js/site/google-analytics.js"></script>
-  <script src="/assets/js/sajari-head.js"></script>
-</head>
+        <!-- Google Font -->
+        <link href="/assets/s-site-assets-stylesheets/fonts/poppins.css" rel="stylesheet">
+        <link rel="stylesheet" href="/assets/s-site-assets-stylesheets/fonts/articulat-site.css">
+        
+        <!-- FontAwesome JS-->
+        <script src="https://kit.fontawesome.com/d67c74a882.js" crossorigin="anonymous"></script>  
 
-<body class="body">
+        <!-- <script defer src="/assets/s-site-assets-template-stylesheets/fontawesome/js/all.min.js"></script> -->
 
-<header>
-  <div class="div-header">
+        <!-- Theme CSS -->  
+        <link id="theme-style" rel="stylesheet" href="/assets/s-site-assets-template-stylesheets/css/theme.css">
+        <link rel="stylesheet" href="/assets/s-site-assets-template-stylesheets/custom-css/styles.css">
+        
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-XBJC11HF8Z"></script>
+        <script translate="no">
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
 
-      <img class="product-logo" src="/site-assets/images/site/product-logos/brightcove-black-on-white.svg" style="max-height: 100px;max-width: 232px;margin-bottom: 1rem;"/>
-<!-- GTranslate: https://gtranslate.io/ -->
-<select onchange="doGTranslate(this);"><option value="">選擇語言</option><option value="en|en" translate="No">English</option><option value="en|zh-TW" translate="No">繁體中文</option><option value="en|fr" translate="No">Français</option><option value="en|de" translate="No">Deutsche</option><option value="en|ja" translate="No">日本語</option><option value="en|ko" translate="No">한국어</option><option value="en|es" translate="No">Español</option></select>
+        gtag('config', 'G-XBJC11HF8Z');
+        </script>
+        <script src="/assets/s-site-assets-scripts/sixth-sense.js"></script>
+        <script src="assets/s-site-assets-scripts/sajari-head.js"></script>
+        <script src="/assets/s-site-assets-scripts/feather.min.js"></script>
 
-<script>
-/* <![CDATA[ */
-function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;if(lang_pair=='')return;var lang=lang_pair.split('|')[1];var plang=location.hostname.split('.')[0];if(plang.length !=2 && plang.toLowerCase() != 'zh-cn' && plang.toLowerCase() != 'zh-tw')plang='en';location.href=location.protocol+'//'+(lang == 'en' ? '' : lang+'.')+location.hostname.replace('www.', '').replace(RegExp('^' + plang + '\\.'), '')+location.pathname+location.search;}
-/* ]]> */
-</script>
+    </head> 
 
-Brightcove 
+    <body> 
+<header class="header fixed-top">
+  <div class="branding docs-branding">
+    <div class="container-fluid position-relative py-2">
+      <div class="docs-logo-wrapper">
+        <button id="docs-sidebar-toggler" class="docs-sidebar-toggler"
+          type="button">
+          <span></span> <span></span> <span></span>
+        </button>
+        <div class="site-logo"><a class="navbar-brand" href="https://support.brightcove.com/" style="margin-left: 15px;"> <img class="logo-icon me-2" src="/assets/s-site-assets-template-stylesheets/images/bc_logo_black_1@1x.png" alt="商標" style="margin-bottom: 9px;"/>
+            <!-- <span class="logo-text">BRIGHTCOVE</span> -->
+          </a></div>
+      </div><!--//docs-logo-wrapper-->
 
-    <span class="secondary-nav"><a href="https://supportportal.brightcove.com/s/login/?"><img src="https://support.brightcove.com/site-assets/images/site/support.png" alt="支持"/>聯繫支持</a><span style="vertical-align: top;margin-left:1em;margin-right:1em;">|</span><a href="https://status.brightcove.com/"><img src="https://support.brightcove.com/site-assets/images/site/status.png" alt="系統狀態"/>系統狀況</a></span><br/>
+      <div class="docs-top-utilities d-flex justify-content-end
+        align-items-center">
+        <select id="site_select" class="form-select select-focus" style="width:
+          20%; margin-right: 10px;" translate="no">
+          <option value="">Other Brightcove Docs</option>
+          
+          
+          <option value="https://support.brightcove.com">Documentation Home</option>
+          
+          
+          
+          <option value="https://support.brightcove.com/">-- VIDEO CLOUD --</option>
+          
+          
+          
+          <option value="https://studio.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Video Cloud Studio</option>
+          
+          
+          
+          <option value="https://mstudio.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Marketing Studio</option>
+          
+          
+          
+          <option value="https://player.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Player Development</option>
+          
+          
+          
+          <option value="https://apis.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Video Cloud Platform APIs</option>
+          
+          
+          
+          <option value="https://sdks.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Video Cloud Device SDKs</option>
+          
+          
+          
+          <option value="https://integrations.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Integrations and CMS Connectors</option>
+          
+          
+          
+          <option value="https://general.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Video Cloud General Information</option>
+          
+          
+          
+          <option value="https://support.brightcove.com/">-- VIDEO ESSENTIALS --</option>
+          
+          
+          
+          <option value="https://audience-insights.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Audience Insights</option>
+          
+          
+          
+          <option value="https://beacon-help.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Beacon Studio</option>
+          
+          
+          
+          <option value="https://beacon.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Beacon Classic</option>
+          
+          
+          
+          <option value="https://corptv.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;CorpTV</option>
+          
+          
+          
+          <option value="https://live.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Live</option>
+          
+          
+          
+          <option value="https://zencoder.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Zencoder</option>
+          
+          
+          
+          <option value="https://support.brightcove.com/">-- VIDEO CLOUD ADD-ONS --</option>
+          
+          
+          
+          <option value="https://gallery.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Gallery</option>
+          
+          
+          
+          <option value="https://studio.support.brightcove.com/social/index.html">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Social</option>
+          
+          
+          
+          <option value="https://interactivity.support.brightcove.com/index.html">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Interactivity</option>
+          
+          
+          
+          <option value="https://ssai.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove SSAI</option>
+          
+          
+          
+          <option value="https://campaign.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Campaign</option>
+          
+          
+        </select>
 
+        <select id="language_select" class="form-select select-focus" style="width: 10%;"
+          onchange="doGTranslate(this);" translate="no">
+          <option value="">Select Language</option>
+          <option value="en|en" translate="No">English</option>
+          <option value="en|zh-TW" translate="No">繁體中文</option>
+          <option value="en|fr" translate="No">Français</option>
+          <option value="en|de" translate="No">Deutsche</option>
+          <option value="en|ja" translate="No">日本語</option>
+          <option value="en|ko" translate="No">한국어</option>
+          <option value="en|es" translate="No">Español</option>
+        </select>
+        <script translate="no">
+          /* <![CDATA[ */
+          function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;if(lang_pair=='')return;var lang=lang_pair.split('|')[1];var plang=location.hostname.split('.')[0];if(plang.length !=2 && plang.toLowerCase() != 'zh-cn' && plang.toLowerCase() != 'zh-tw')plang='en';location.href=location.protocol+'//'+(lang == 'en' ? '' : lang+'.')+location.hostname.replace('www.', '').replace(RegExp('^' + plang + '\\.'), '')+location.pathname+location.search;}
+          /* ]]> */
+        </script>
+      </div>
+    </div>
   </div>
-  <nav aria-label="breadcrumb">
-    <ol class="breadcrumb arr-right">
-      
-      
-      
-      <li class="breadcrumb-item active" aria-current="page">布萊特灣文件</li>
-    </ol>
-  </nav>
 </header>
-<div class="container">
+
+<div class="docs-wrapper">
+  <div id="docs-sidebar" class="docs-sidebar" style="padding-right: 15px;">
+    <!-- <div id="nav-search-box" class="top-search-box d-lg-none p-3" style="margin-left: 5px;"></div> -->
     <div class="row">
-      <div class="col-sm-2 left-side-bar">
-        <nav style="float: left;" id="announcements">
-          <h6 class="toc" style="color: rgb(9, 7, 140);margin-top: 1em;">公告</h6>
-          <ul id="announcement_list" class="list-none">
+      
+        <div id="side_nav" style="margin-left: 1em;display:
+          inline-block;border-right: 1px solid #e5e5e6;padding-right: 1em;">
+          
+          <nav class="docs-nav sidenav" aria-label="Main">
+            <ul class="site-nav" style="list-style-type: none;">
             
-            <li style="color: rgb(9, 7, 140);font-size: smaller;margin-bottom:
-            .7rem;">舊版的內嵌系統將於 2021 年 1 月 31 日關閉。<a href="https://studio.support.brightcove.com/general/moving-to-dynamic-delivery.html">學到更多...</a></li>
             
-            <li style="color: rgb(9, 7, 140);font-size: smaller;margin-bottom:
-            .7rem;">Brightcove Player v6.46.2- <a href="https://player.support.brightcove.com/release-notes/brightcove-player-release-notes.html">細節</a></li>
+            
+            <li class="nav-item section-title"><a class="nav-link" href="/index.html">首頁</a></li>
+            
+            
+            
+            
+            
+            <li class="nav-item section-title"><a class="nav-link" href="https://studio.support.brightcove.com/index.html">視頻雲工作室</a></li>
+            
+            
+            
+            
+            
+            <li class="nav-item section-title"><a class="nav-link" href="https://mstudio.support.brightcove.com/index.html">營銷工作室</a></li>
+            
+            
+            
+            
+            
+            <li class="nav-item section-title"><a class="nav-link" href="https://player.support.brightcove.com/index.html">Brightcove 球員發展</a></li>
+            
+            
+            
+            
+            
+            <li class="nav-item section-title"><a class="nav-link" href="https://interactivity.support.brightcove.com/index.html">Brightcove互動</a></li>
+            
+            
+            
+            
+            
+            <li class="nav-item section-title"><a class="nav-link" href="https://apis.support.brightcove.com/index.html">視頻雲平台接口</a></li>
+            
+            
+            
+            
+            
+            <li class="nav-item section-title"><a class="nav-link" href="https://sdks.support.brightcove.com/index.html">視頻雲設備SDK</a></li>
+            
+            
+            
+            
+            
+            <li class="nav-item section-title"><a class="nav-link" href="https://integrations.support.brightcove.com/index.html">視頻雲集成</a></li>
+            
+            
+            
+            
+            
+            <li class="nav-item section-title"><a class="nav-link" href="https://general.support.brightcove.com/index.html">視頻雲一般信息</a></li>
+            
+            
+            
+            
+            
+            <li class="nav-item section-title"><a class="nav-link" href="https://gallery.support.brightcove.com/index.html">畫廊</a></li>
+            
+            
+            
+            
+            
+            <li class="nav-item section-title"><a class="nav-link" href="https://studio.support.brightcove.com/social/index.html">社交</a></li>
+            
+            
+            
+            
+            
+            <li class="nav-item section-title"><a class="nav-link" href="https://beacon-help.support.brightcove.com/index.html">Brightcove 燈塔工作室</a></li>
+            
+            
+            
+            
+            
+            <li class="nav-item section-title"><a class="nav-link" href="https://beacon.support.brightcove.com/index.html">Brightcove Beacon 經典</a></li>
+            
+            
+            
+            
+            
+            <li class="nav-item section-title"><a class="nav-link" href="https://corptv.support.brightcove.com/index.html">Brightcove CorpTV</a></li>
+            
+            
+            
+            
+            
+            <li class="nav-item section-title"><a class="nav-link" href="https://live.support.brightcove.com/index.html">布萊特灣直播</a></li>
+            
+            
+            
+            
+            
+            <li class="nav-item section-title"><a class="nav-link" href="https://zencoder.support.brightcove.com">Zencoder</a></li>
+            
+            
+            
+            
+            
+            <li class="nav-item section-title"><a class="nav-link" href="https://campaign.support.brightcove.com/index.html">活動</a></li>
+            
+            
+            
+            
+            
+            <li class="nav-item section-title"><a class="nav-link" href="https://ssai.support.brightcove.com/index.html"></a></li>
+            
+            
+            
+            
+            <li class="nav-item section-title"><a class="nav-link" href="/training/index.html"><span class="theme-icon-holder me-2"><i class="fa-solid fa-plus"></i></span>&nbsp;訓練</a>
+              <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/training/online-training-courses.html">所有線上訓練課程</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/training/register-training.html">註冊參加講師指導訓練</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/training/training-demand-introduction-video-cloud.html">訓練：視訊雲端簡介</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/training/training-demand-introduction-video-cloud-analytics.html">訓練：視訊雲端分析簡介</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/training/training-demand-video-cloud-basics.html">訓練：視訊雲端基礎知識</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/training/video-cloud-studio-training-videos.html">視頻雲端工作室培訓視頻</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/training/brightcove-university.html">布萊特灣大學培訓課程</a></li>
+              
+              
+              
+            </ul>
+            </li>
+            
+            
+            
+            <li class="nav-item section-title"><a class="nav-link" href="/support/index.html"><span class="theme-icon-holder me-2"><i class="fa-solid fa-plus"></i></span>&nbsp;支持</a>
+              <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/support/viewing-brightcove-system-status-page.html">檢視布萊特灣系統狀態頁面</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/support/contact-sales.html">聯絡銷售人員</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/support/opening-case-with-brightcove-support.html">開啟支援案例</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/support/reset-support-portal-password.html">重置您的支持門戶密碼</a></li>
+              
+              
+              
+            </ul>
+            </li>
+            
             
           </ul>
-        </nav>
+          </nav>
+        </div>
       </div>
-    <div class="col-lg-8" style="background-color: white;color: #333333;margin-top: -1em;margin-bottom: -1em;padding-bottom:1em;margin-left:5%">
-  <!-- bootstrap layout -->
-
-<p id="bc_veggie_burger_wrapper" style="display: none;"><img id="bc_veggie_burger" src="/assets/images/feather/menu.svg" alt="導覽功能表"/></p>
-
-<!-- search bar -->
-<div id="nav-search-box" style="margin-top: 2rem;"></div>
-<!-- in-page navigation for narrow screens -->
-<details class="centered-inpage-nav" id="centered_inpage_nav">
-  <summary><h6 class="toc">頁面內容</h6></summary>
-  <nav id="centered_toc"></nav>
-  <ul id="centered_in_page_toc" class="list-none"></ul>
-</details>
-<!-- open in new tab/window -->
-<a id="open_new_tab" href="#" target="_blank" style="display: none;"><img src="/assets/images/feather/external-link.svg" alt="在新分頁中開啟" style="margin-top:4em;width: 1.5em;"/></a>
-
-
-<style>
-@font-face {
-  font-family: Balto Web;
-  src: url(https://files.brightcove.com/fonts/balto/baltoweb-ultra.eot);
-  font-weight: 900;
-  font-style: normal;
-  font-display: swap
-}
-
-@font-face {
-  font-family: Balto Web;
-  src: url(https://files.brightcove.com/fonts/balto/baltoweb-ultra.woff) format("woff");
-  font-weight: 900;
-  font-style: normal;
-  font-display: swap
-}
-
-@font-face {
-  font-family: Balto Web;
-  src: url(https://files.brightcove.com/fonts/balto/baltoweb-super.eot);
-  font-weight: 800;
-  font-style: normal;
-  font-display: swap
-}
-
-@font-face {
-  font-family: Balto Web;
-  src: url(https://files.brightcove.com/fonts/balto/baltoweb-super.woff) format("woff");
-  font-weight: 800;
-  font-style: normal;
-  font-display: swap
-}
-
-@font-face {
-  font-family: Balto Web;
-  src: url(https://files.brightcove.com/fonts/balto/baltoweb-black.eot);
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap
-}
-
-@font-face {
-  font-family: Balto Web;
-  src: url(https://files.brightcove.com/fonts/balto/baltoweb-black.woff) format("woff");
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap
-}
-
-@font-face {
-  font-family: Balto Web;
-  src: url(https://files.brightcove.com/fonts/balto/baltoweb-bold.eot);
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap
-}
-
-@font-face {
-  font-family: Balto Web;
-  src: url(https://files.brightcove.com/fonts/balto/baltoweb-bold.woff) format("woff");
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap
-}
-
-@font-face {
-  font-family: Balto Web;
-  src: url(https://files.brightcove.com/fonts/balto/baltoweb-medium.eot);
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap
-}
-
-@font-face {
-  font-family: Balto Web;
-  src: url(https://files.brightcove.com/fonts/balto/baltoweb-medium.woff) format("woff");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap
-}
-
-h1 {
-  color: rgb(7, 9, 140);
-  font-family: Balto Web, Public Sans, Helvetica, sans-serif;
-  font-weight: bold;
-  margin-left: 10%;
-}
-
-h2 {
-  font-family: Balto Web, Public Sans, Helvetica, sans-serif;
-  font-weight: bold;
-}
-
-footer h2 {
-  font-family: Public Sans, Helvetica, sans-serif;
-  font-weight: normal;
-}
-
-#nav-search-box > div {
-  max-width: 80%;
-}
-
-  .bcls-card-small {
-    cursor: auto;
-    display: inline-block;
-  }
-
-  .product-logo {
-    background-image: contain no-repeat url(/site-assets/images/site/product-logos/brightcove-black-on-white.svg);
-  }
-
-  @media screen and (max-width: 1000px) {
-    h1 {
-      font-size: 2.2em !important;
-    }
-
-    h2 {
-      font-size: 1.9em !important;
-    }
-
-    h3 {
-      font-size: 1.3em !important;
-    }
-
-    h4 {
-      font-size: 1.1em !important;
-    }
-
-    h5 {
-      font-size: 1em !important;
-    }
-
-    h1 i.fal,
-    h1 i.fab,
-    h1 i.fas,
-    h1 i.far {
-      display: none;
-    }
-
-    .bcls-card-small {
-      display: block;
-    }
-
-    .card-wrapper {
-      justify-content: start;
-      display: flow-root;
-    }
-
-    body,
-    .body {
-      font-size: smaller;
-    }
-  }
-</style>
-
-<h1>布萊特灣文件</h1>
-<article class="bcls-article">
-  <p style="border:1px #013894 solid; padding:.5rem;text-align: center;width: 80%;font-size: .9em;">新來到布萊特灣？有關的課程<a href="https://university.brightcove.com/">布萊頓灣大學</a>旨在幫助您快速入門！</p>
-  <section class="card-wrapper">
-    <section class="bcls-card-small" style="margin-left: -4rem;">
-      <div class="card-content">
-        <h2 style="margin-top: 1.3em;font-weight: bold;">視訊雲端</h2>
-        <h3 style="margin-top: .4em;font-weight: 900;"><a data-type="new-site-link" href="https://studio.support.brightcove.com">一室公寓</a></h3>
-        <h3 style="margin-top: .4em;font-weight: 900;"><a data-type="new-site-link" href="https://player.support.brightcove.com">布萊特灣玩家</a></h3>
-        <h3 style="margin-top: .4em;font-weight: 900;"><a data-type="new-site-link" href="https://apis.support.brightcove.com">平台API</a></h3>
-        <h3 style="margin-top: .4em;font-weight: 900;"><a data-type="new-site-link" href="https://sdks.support.brightcove.com">設備SDK</a></h3>
-        <h3 style="margin-top: .4em;font-weight: 900;"><a data-type="new-site-link" href="https://integrations.support.brightcove.com">集成/連接器</a></h3>
-        <h3 style="margin-top: .4em;font-weight: 900;"><a data-type="new-site-link" href="https://general.support.brightcove.com">一般資訊</a></h3>
-      </div>
-    </section>
-    <section class="bcls-card-small" style="margin-left: -1rem;">
-      <div class="card-content">
-        <h2 style="margin-top: 1.3em;font-weight: bold;">視訊必要項目</h2>
-        <h3 style="margin-top: .4em;font-weight: 900;"><a data-type="new-site-link" href="https://beacon.support.brightcove.com">布萊頓灣燈塔</a></h3>
-          <h3 style="margin-top: .4em;font-weight: 900;"><a data-type="new-site-link" href="https://live.support.brightcove.com">布萊特灣直播</a></h3>
-        <h3 style="margin-top: .4em;font-weight: 900;">Brightcove Zencoder<a data-type="new-site-link" href="https://zencoder.support.brightcove.com"></a></h3>
-      </div>
-    </section>
-    <section class="bcls-card-small">
-      <div class="card-content">
-        <h2 style="margin-top: 1.3em;font-weight: bold;">視訊附加元件</h2>
-        <h3 style="margin-top: .4em;font-weight: 900;"><a data-type="new-site-link" href="https://gallery.support.brightcove.com">Brightcove畫廊</a></h3>
-        <h3 style="margin-top: 1rem;font-weight: 900;"><a data-type="new-site-link" href="https://audience.support.brightcove.com">亮灣觀眾</a></h3>
-        <h3 style="margin-top: .4em;font-weight: 900;"><a data-type="new-site-link" href="https://social.support.brightcove.com">Brightcove社交</a></h3>
-        <h3 style="margin-top: .4em;font-weight: 900;">Brightcove SSAI<a data-type="new-site-link" href="https://ssai.support.brightcove.com"></a></h3>
-        <h3 style="margin-top: .4em;font-weight: 900;"><a data-type="new-site-link" href="https://campaign.support.brightcove.com">Brightcove戰役</a></h3>
-        <h3 style="margin-top: .4em;font-weight: 900;"><a data-type="new-site-link" href="https://engage.support.brightcove.com">Brightcove訂婚</a></h3>
-      </div>
-    </section>
-  </section>
-  <hr style="border-top: 1px #999 solid;margin-left: 0;width: 80%;">
-    <h2 style="margin-left: 33%;margin-top: 1.3em;font-weight: bold;font-size: 1.1rem;">視訊解決方案</h2>
-  <section class="card-wrapper" style="margin-top: -1.5em;">
-    <section onclick="window.location.pathname = '/develop/index.html';" class="bcls-card-small" style="margin-left: -4rem;">
-      <div class="card-content">
-        <h3><a data-type="new-site-link" href="https://general.support.brightcove.com/general/brightcove-product-overview.html">視頻營銷套件</a></h3>
-      </div>
-    </section>
-    <section onclick="window.location.pathname = '/develop/index.html';" class="bcls-card-small" style="margin-left: -2rem;">
-      <div class="card-content">
-        <h3><a data-type="new-site-link" href="https://general.support.brightcove.com/general/brightcove-product-overview.html">企業視頻套件</a></h3>
-      </div>
-    </section>
-    <section onclick="window.location.pathname = '/develop/index.html';" class="bcls-card-small" style="margin-left: -2rem;">
-      <div class="card-content">
-        <h3><a data-type="new-site-link" href="https://general.support.brightcove.com/general/brightcove-continuum-overview.html">Brightcove連續體</a></h3>
-      </div>
-    </section>
-  </section>
-  <hr style="border-top: 1px #999 solid;margin-left: 0;width: 80%;">
-  <section class="card-wrapper" style="margin-left: -6rem;">
-    <section onclick="window.location.pathname = '/develop/index.html';" class="bcls-card-small">
-      <div class="card-content">
-        <h5><a href="https://support.ottflow.com/hc/en-us/restricted?return_to=https%3A%2F%2Fsupport.ottflow.com%2Fhc%2Fen-us">Brightcove OTT流<sup>™</sup></a></h5>
-      </div>
-    </section>
-    <section onclick="window.location.pathname = '/develop/index.html';" class="bcls-card-small">
-      <div class="card-content">
-        <h5><a href="https://help-ooyala.brightcove.com">舊版Ooyala文檔</a></h5>
-      </div>
-    </section>
-  </section>
-</article>
-<script>
-  var BCLS_homepage = (function (window, document) {
-    var product_logo = document.querySelector('.product-logo');
-
-    if (window.innerWidth < 1000) {
-      product_logo.setAttribute('src', '/site-assets/images/site/product-logos/b-white-on-black.svg');
-      product_logo.setAttribute('style', 'max-height:30px;margin-bottom:1rem;')
-    }
-
-    window.addEventListener('resize', function () {
-      if (window.innerWidth < 1000) {
-        product_logo.setAttribute('src', '/site-assets/images/site/product-logos/b-white-on-black.svg');
-        product_logo.setAttribute('style', 'max-height:30px;margin-bottom:1rem;')
-      } else {
-        product_logo.setAttribute('src', '/site-assets/images/site/product-logos/brightcove-black-on-white.svg');
-      }
-
-    });
-  })(window, document);
-</script>
-<!-- complete bootstrap layout -->
-    </div>
-    <div class="col-sm-2 right-side-bar">
-      <nav class="right-side-nav" id="announcements">
-        <h6 class="toc">公告</h6>
-        <ul id="announcement_list" class="list-none">
-          
-          <li></li>
-          
-        </ul>
-      </nav>
-    </div>
+    </div><!--//docs-sidebar-->
   </div>
 </div>
 
-<hr>
-<footer class="bcls-footer" role="contentinfo">  <div class="row">
-    <div class="region region-footer-top-center col-md-12">
-      <nav role="navigation" aria-labelledby="block-brightcovesupport-menu" id="block-brightcovesupport" class="footer-menu">
-
-        <h2>布萊特灣支援</h2>
-
-        <ul class="menu">
-          <li>
-            <a href="https://status.brightcove.com">系統狀態</a>
-          </li>
-          <li>
-            <a href="https://supportportal.brightcove.com/s/login/?">聯絡支援</a>
-          </li>
-          <li>
-            <a href="https://support.brightcove.com/">文獻資料</a>
-          </li>
-        </ul>
-
-      </nav>
-      <nav role="navigation" aria-labelledby="block-training-menu" id="block-training" class="footer-menu">
-
-        <h2>訓練</h2>
-
-        <ul class="menu">
-          <li>
-            <a href="https://studio.support.brightcove.com/training/online-training-courses.html">線上課程</a>
-          </li>
-          <li>
-            <a href="https://studio.support.brightcove.com/training/register-training.html">註冊課程</a>
-          </li>
-          <li>
-            <a href="https://university.brightcove.com/">布萊特灣大學</a>
-          </li>
-        </ul>
-
-      </nav>
-      <nav role="navigation" aria-labelledby="block-brightcove-menu" class="footer-menu">
-
-        <h2>Brightcove</h2>
-
-        <ul class="menu">
-          <li>
-            <a href="https://www.brightcove.com">亮麗</a>
-          </li>
-          <li>
-            <a href="https://supportportal.brightcove.com/s/login/?">聯絡我們</a>
-          </li>
-        </ul>
-      </nav>
+<div class="page-header theme-bg-dark py-5 text-center position-relative"
+    style="background:#4EA9D1;">
+    <div class="theme-bg-shapes-right"></div>
+    <div class="theme-bg-shapes-left"></div>
+    <div class="container">
+        <!-- <h1 class="page-heading single-col-max mx-auto" style="color: transparent; -webkit-text-stroke: 2px white; text-transform:uppercase;">Video Cloud Studio
+            </h1> -->
+        <h1 class="page-heading single-col-max mx-auto">布萊特灣文件</h1>
+        <div class="page-intro single-col-max mx-auto">全球最值得信賴的流媒體技術公司。</div>
+            <!-- Search bar -->
+        <div id="nav-search-box" class="main-search-box pt-3 d-block mx-auto"></div>
     </div>
-  </div>
-  <div class="row">
-    <div class="region region-footer-bottom-center col-md-12">
-      <div class="bcls-copyright footer-menu">
-        <table>
-          <tr>
-            <td>
-              <div id="bc_copyright" class="field field--name-field-copyright-year field--type-string field--label-hidden field--item" style="float: left;"> 布萊特灣公司版權所有</div>
-            </td>
-            <td><a href="https://www.brightcove.com/en/legal/privacy">私隱</a> | 條<a href="https://www.brightcove.com/en/terms-and-conditions">款及細則</a></td>
-            <td>
-              <div class="gf-links-cols footer-menu">
-                <div class="gf-social"><a href="https://www.linkedin.com/company/16439" title="LinkedIn" newtab="newtab" class="gf-social-linkedin"><i class="fab fa-linkedin-in" style="font-size: 1.5rem;"></i></a><a href="https://twitter.com/brightcove" title="Twitter" newtab="newtab" class="gf-social-twitter"><i class="fab fa-twitter" style="font-size: 1.5rem;"></i></a><a href="https://www.facebook.com/Brightcove" title="Facebook" newtab="newtab" class="gf-social-facebook"><i class="fab fa-facebook-f" style="font-size: 1.5rem;"></i></a>
+</div><!--//page-header-->
+<!-- begin main contents -->
+<div class="page-content">
+    <div class="container">
+      <div class="docs-overview py-5">
+  
+<div class="justify-content-center">
+  <h2>按產品瀏覽</h2>
+  <br/>
+  <!-- CODE FOR TABS -->
+  <nav>
+    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+      <button class="nav-link active" id="nav-video-cloud-tab" data-bs-toggle="tab" data-bs-target="#nav-video-cloud" type="button" role="tab" aria-controls="nav-video-cloud" aria-selected="true"><h5>Video Cloud</h5></button>
+      <button class="nav-link" id="nav-beacon-tab" data-bs-toggle="tab" data-bs-target="#nav-beacon" type="button" role="tab" aria-controls="nav-beacon" aria-selected="false"><h5>Brightcove OTT</h5></button>
+      <button class="nav-link" id="nav-audience-tab" data-bs-toggle="tab" data-bs-target="#nav-audience" type="button" role="tab" aria-controls="nav-audience" aria-selected="false"><h5>觀眾洞察</h5></button>
+      <button class="nav-link" id="nav-developers-tab" data-bs-toggle="tab" data-bs-target="#nav-developers" type="button" role="tab" aria-controls="nav-developers" aria-selected="false"><h5>開發人員/API</h5></button>
+      <button class="nav-link" id="nav-zencoder-tab" data-bs-toggle="tab" data-bs-target="#nav-zencoder" type="button" role="tab" aria-controls="nav-zencoder" aria-selected="false"><h5>Zencoder</h5></button>
+      <button class="nav-link" id="nav-resources-tab" data-bs-toggle="tab" data-bs-target="#nav-resources" type="button" role="tab" aria-controls="nav-resources" aria-selected="false"><h5>資源</h5></button>
+    </div>
+  </nav>
+  <!-- CONTENT FOR THE TABS -->
+  <div class="tab-content" id="nav-tabContent">
+    <!-- VIDEO CLOUD TAB CONTENT -->
+    <div class="tab-pane fade show active" id="nav-video-cloud" role="tabpanel" aria-labelledby="nav-video-cloud-tab" tabindex="0">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-12 col-lg-4 py-3">
+            <div class="card card-hover shadow-sm">
+              <div class="card-body">
+                <h4 class="card-title mb-3">
+                  <span class="span-icon card-icon-holder icon-theme me-2"><i class="fa-duotone fa-cloud"></i></span> <span class="card-title-text">視頻雲工作室</span>
+                </h4>
+                <div class="card-text">
+                  <p>跨台式機、平板電腦和移動設備管理您的視頻發布工作流程。
+                  </p>
                 </div>
-              </div>
-            </td>
-          </tr>
-        </table>
+                <a class="card-link-mask" href="https://studio.support.brightcove.com/"></a>
+              </div><!--//card-body-->
+            </div><!--//card-->         
+          </div><!--//col-->
+  
+          <div class="col-12 col-lg-4 py-3">
+            <div class="card card-hover shadow-sm">
+              <div class="card-body">
+                <h4 class="card-title mb-3">
+                  <span class="span-icon card-icon-holder icon-theme me-2"><i class="fa-duotone fa-store"></i></span> <span class="card-title-text">營銷工作室</span>
+                </h4>
+                <div class="card-text">
+                  <p>使您的營銷團隊能夠跨多個項目訪問、實施和衡量視頻內容。</p>
+                </div>
+                <a class="card-link-mask" href="https://mstudio.support.brightcove.com/"></a>
+              </div><!--//card-body-->
+            </div><!--//card-->         
+          </div><!--//col-->
+  
+          <div class="col-12 col-lg-4 py-3">
+            <div class="card card-hover shadow-sm">
+              <div class="card-body">
+                <h4 class="card-title mb-3">
+                  <span class="span-icon card-icon-holder icon-theme me-2"><i class="fa-duotone fa-clapperboard"></i></span> <span class="card-title-text">光明灣畫廊</span>
+                </h4>
+                <div class="card-text">
+                  <p>無需任何技術知識或編碼即可創建引人入勝的視頻體驗。</p>
+                </div>
+                <a class="card-link-mask" href="https://gallery.support.brightcove.com/"></a>
+              </div><!--//card-body-->
+            </div><!--//card-->         
+          </div><!--//col-->
+  
+          <div class="col-12 col-lg-4 py-3">
+            <div class="card card-hover shadow-sm">
+              <div class="card-body">
+                <h4 class="card-title mb-3">
+                  <span class="span-icon card-icon-holder icon-theme me-2"><i class="fa-sharp fa-solid fa-tv-retro"></i></span> <span class="card-title-text">光明灣直播</span>
+                </h4>
+                <div class="card-text">
+                  <p>創建實時事件並將其廣播到桌面和移動設備。</p>
+                </div>
+                <a class="card-link-mask" href="https://live.support.brightcove.com/"></a>
+              </div><!--//card-body-->
+            </div><!--//card-->         
+          </div><!--//col-->
+  
+          <div class="col-12 col-lg-4 py-3">
+            <div class="card card-hover shadow-sm">
+              <div class="card-body">
+                <h4 class="card-title mb-3">
+                  <span class="span-icon card-icon-holder icon-theme me-2"><i class="fa-duotone fa-hand-back-point-up"></i></span> <span class="card-title-text">Brightcove互動</span>
+                </h4>
+                <div class="card-text">
+                  <p>與觀眾建立雙向交流，使視頻體驗更具吸引力。</p>
+                </div>
+                <a class="card-link-mask" href="https://interactivity.support.brightcove.com/"></a>
+              </div><!--//card-body-->
+            </div><!--//card-->         
+          </div><!--//col-->
+  
+          <div class="col-12 col-lg-4 py-3">
+            <div class="card card-hover shadow-sm">
+              <div class="card-body">
+                <h4 class="card-title mb-3">
+                  <span class="span-icon card-icon-holder icon-theme me-2"><i class="fa-duotone fa-rectangle-ad"></i></span> <span class="card-title-text">Brightcove SSAI</span>
+                </h4>
+                <div class="card-text">
+                  <p>將有針對性的廣告動態地縫合到您的內容中，並將兩者作為一個連續的流進行交付。</p>
+                </div>
+                <a class="card-link-mask" href="https://ssai.support.brightcove.com/"></a>
+              </div><!--//card-body-->
+            </div><!--//card-->         
+          </div><!--//col-->
+  
+          <div class="col-12 col-lg-4 py-3">
+            <div class="card card-hover shadow-sm">
+              <div class="card-body">
+                <h4 class="card-title mb-3">
+                  <span class="span-icon card-icon-holder icon-theme me-2"><i class="fa-regular fa-user-group"></i></span> <span class="card-title-text">光明灣運動</span>
+                </h4>
+                <div class="card-text">
+                  <p>為視頻登錄頁面生成嵌入代碼並獲取分析以衡量性能。</p>
+                </div>
+                <a class="card-link-mask" href="https://campaign.support.brightcove.com/"></a>
+              </div><!--//card-body-->
+            </div><!--//card-->         
+          </div><!--//col-->
+  
+          <div class="col-12 col-lg-4 py-3">
+            <div class="card card-hover shadow-sm">
+              <div class="card-body">
+                <h4 class="card-title mb-3">
+                  <span class="span-icon card-icon-holder icon-theme me-2"><i class="fa-duotone fa-puzzle-piece"></i></span> <span class="card-title-text">集成/連接器</span>
+                </h4>
+                <div class="card-text">
+                  <p>管理您的視頻發布工作流程，並通過流行的第 3 方平台利用視頻的力量。</p>
+                </div>
+                <a class="card-link-mask" href="https://integrations.support.brightcove.com/"></a>
+              </div><!--//card-body-->
+            </div><!--//card-->         
+          </div><!--//col-->
+  
+          <div class="col-12 col-lg-4 py-3">
+            <div class="card card-hover shadow-sm">
+              <div class="card-body">
+                <h4 class="card-title mb-3">
+                  <span class="span-icon card-icon-holder icon-theme me-2"><i class="fa-duotone fa-circle-info"></i></span> <span class="card-title-text">一般信息</span>
+                </h4>
+                <div class="card-text">
+                  <p>該站點包含有關 Video Cloud 的一般信息。</p>
+                </div>
+                <a class="card-link-mask" href="https://general.support.brightcove.com/"></a>
+              </div><!--//card-body-->
+            </div><!--//card-->         
+          </div><!--//col-->
+
+        </div>
       </div>
     </div>
+    <!-- OTT TAB CONTENT -->
+    <div class="tab-pane fade" id="nav-beacon" role="tabpanel" aria-labelledby="nav-beacon-tab" tabindex="0">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-12 col-lg-4 py-3">
+            <div class="card card-hover shadow-sm">
+              <div class="card-body">
+                <h4 class="card-title mb-3">
+                  <span class="span-icon card-icon-holder icon-theme me-2"><i class="fa-duotone fa-tv"></i></span> <span class="card-title-text">燈塔工作室</span>
+                </h4>
+                <div class="card-text">
+                  <p>創建和配置單一媒體流媒體體驗，以跨多個 OTT 平台和設備使用。</p>
+                </div>
+                <a class="card-link-mask" href="https://beacon-help.support.brightcove.com/"></a>
+              </div><!--//card-body-->
+            </div><!--//card-->         
+          </div><!--//col-->
+  
+          <div class="col-12 col-lg-4 py-3">
+            <div class="card card-hover shadow-sm">
+              <div class="card-body">
+                <h4 class="card-title mb-3">
+                  <span class="span-icon card-icon-holder icon-theme me-2"><i class="fa-duotone fa-tv-retro"></i></span> <span class="card-title-text">燈塔經典</span>
+                </h4>
+                <div class="card-text">
+                  <p>創建和配置單一媒體流媒體體驗，以跨多個 OTT 平台和設備使用。</p>
+                </div>
+                <a class="card-link-mask" href="https://beacon.support.brightcove.com/"></a>
+              </div><!--//card-body-->
+            </div><!--//card-->         
+          </div><!--//col-->
+  
+          <div class="col-12 col-lg-4 py-3">
+            <div class="card card-hover shadow-sm">
+              <div class="card-body">
+                <h4 class="card-title mb-3">
+                  <span class="span-icon card-icon-holder icon-theme me-2"><i class="fa-duotone fa-grid-2"></i></span> <span class="card-title-text">公司電視</span>
+                </h4>
+                <div class="card-text">
+                  <p>CorpTV 為企業提供流媒體服務以吸引他們的觀眾。</p>
+                </div>
+                <a class="card-link-mask" href="https://corptv.support.brightcove.com/"></a>
+              </div><!--//card-body-->
+            </div><!--//card-->         
+          </div><!--//col-->
+  
+        </div>
+      </div>
+    </div>
+    <!-- AUDIENCE INSIGHTS TAB CONTENT -->
+    <div class="tab-pane fade" id="nav-audience" role="tabpanel" aria-labelledby="nav-audience-tab" tabindex="0">
+      <div class="container">
+        <div class="row">
+          
+            <div class="col-12 col-lg-4 py-3">
+              <div class="card card-hover shadow-sm">
+                <div class="card-body">
+                  <h4 class="card-title mb-3">
+                    <span class="span-icon card-icon-holder icon-theme me-2"><i class="fa-duotone fa-chart-simple"></i></span> <span class="card-title-text">觀眾洞察</span>
+                  </h4>
+                  <div class="card-text">
+                    <p>通過有關訂閱者、註冊用戶和一般用戶的指標，深入了解您的觀眾，以幫助您有效地開展業務。</p>
+                  </div>
+                  <a class="card-link-mask" href="https://audience-insights.support.brightcove.com/"></a>
+                </div><!--//card-body-->
+              </div><!--//card-->         
+            </div><!--//col-->
+      
+        </div>
+      </div>
+    </div>
+  <!-- DEVELOPERS/APIS TAB CONTENT -->
+    <div class="tab-pane fade" id="nav-developers" role="tabpanel" aria-labelledby="nav-developers-tab" tabindex="0">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-12 col-lg-4 py-3">
+            <div class="card card-hover shadow-sm">
+              <div class="card-body">
+                <h4 class="card-title mb-3">
+                  <span class="span-icon card-icon-holder icon-theme me-2"><i class="fa-duotone fa-circle-play"></i></span> <span class="card-title-text">Brightcove播放器</span>
+                </h4>
+                <div class="card-text">
+                  <p>使用 CSS 和 JavaScript，使用 Brightcove Player 為您的觀眾創建高度定制的視頻體驗。</p>
+                </div>
+                <a class="card-link-mask" href="https://player.support.brightcove.com/"></a>
+              </div><!--//card-body-->
+            </div><!--//card-->         
+          </div><!--//col-->
+  
+          <div class="col-12 col-lg-4 py-3">
+            <div class="card card-hover shadow-sm">
+              <div class="card-body">
+                <h4 class="card-title mb-3">
+                  <span class="span-icon card-icon-holder icon-theme me-2"><i class="fa-duotone fa-display-code"></i></span> <span class="card-title-text">平台API</span>
+                </h4>
+                <div class="card-text">
+                  <p>平台 API 允許您以編程方式訪問視頻雲平台的幾乎所有方面。</p>
+                </div>
+                <a class="card-link-mask" href="https://apis.support.brightcove.com/"></a>
+              </div><!--//card-body-->
+            </div><!--//card-->         
+          </div><!--//col-->
+  
+          <div class="col-12 col-lg-4 py-3">
+            <div class="card card-hover shadow-sm">
+              <div class="card-body">
+                <h4 class="card-title mb-3">
+                  <span class="span-icon card-icon-holder icon-theme me-2"><i class="fa-duotone fa-mobile"></i></span> <span class="card-title-text">設備 SDK</span>
+                </h4>
+                <div class="card-text">
+                  <p>使用本機 SDK 將本機應用程序與 Android、iOS、iPadOS 和 tvOS 集成。</p>
+                </div>
+                <a class="card-link-mask" href="https://sdks.support.brightcove.com/"></a>
+              </div><!--//card-body-->
+            </div><!--//card-->         
+          </div><!--//col-->
+        </div>
+      </div>
+    </div>
+    <!-- ZENCODER TAB CONTENT -->
+    <div class="tab-pane fade" id="nav-zencoder" role="tabpanel" aria-labelledby="nav-zencoder-tab" tabindex="0">
+      <div class="container">
+        <div class="row">
+          
+          <div class="col-12 col-lg-4 py-3">
+            <div class="card card-hover shadow-sm">
+              <div class="card-body">
+                <h4 class="card-title mb-3">
+                  <span class="span-icon card-icon-holder icon-theme me-2"><i class="fa-duotone fa-file-binary"></i></span> <span class="card-title-text">Zencoder</span>
+                </h4>
+                <div class="card-text">
+                  <p>一種快速可靠的視頻和音頻文件轉碼服務，可為 Web 和各種設備輸出產品更新，並可與您的 CMS 和應用程序集成。</p>
+                </div>
+                <a class="card-link-mask" href="https://zencoder.support.brightcove.com/"></a>
+              </div><!--//card-body-->
+            </div><!--//card-->         
+          </div><!--//col-->
+        
+        </div>
+      </div>
+    </div> 
+    <!-- RESOURCES TAB CONTENT -->
+    <div class="tab-pane fade" id="nav-resources" role="tabpanel" aria-labelledby="nav-resources-tab" tabindex="0">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-12 col-lg-4 py-3">
+            <div class="card card-hover shadow-sm">
+              <div class="card-body">
+                <h4 class="card-title mb-3">
+                  <span class="span-icon card-icon-holder icon-theme me-2"><i class="fa-duotone fa-note"></i></span> <span class="card-title-text">產品發布說明</span>
+                </h4>
+                <div class="card-text">
+                  <p>我們最新的產品發布說明。</p>
+                </div>
+                <a class="card-link-mask" href="https://support.brightcove.com/product-updates.html"></a>
+              </div><!--//card-body-->
+            </div><!--//card-->         
+          </div><!--//col-->
+  
+          <div class="col-12 col-lg-4 py-3">
+            <div class="card card-hover shadow-sm">
+              <div class="card-body">
+                <h4 class="card-title mb-3">
+                  <span class="span-icon card-icon-holder icon-theme me-2"><i class="fa-duotone fa-books"></i></span> <span class="card-title-text">文檔更新</span>
+                </h4>
+                <div class="card-text">
+                  <p>我們最近的文檔更新。</p>
+                </div>
+                <a class="card-link-mask" href="https://support.brightcove.com/doc-updates.html"></a>
+              </div><!--//card-body-->
+            </div><!--//card-->         
+          </div><!--//col-->
+  
+          <div class="col-12 col-lg-4 py-3">
+            <div class="card card-hover shadow-sm">
+              <div class="card-body">
+                <h4 class="card-title mb-3">
+                  <span class="span-icon card-icon-holder icon-theme me-2"><i class="fa-duotone fa-graduation-cap"></i></span> <span class="card-title-text">光明灣學院</span>
+                </h4>
+                <div class="card-text">
+                  <p>Brightcove Academy 提供引人入勝的點播課程，因此您可以在自己的時間按照自己的進度學習。</p>
+                </div>
+                <a class="card-link-mask" href="https://academy.brightcove.com/"></a>
+              </div><!--//card-body-->
+            </div><!--//card-->         
+          </div><!--//col-->
+  
+          <div class="col-12 col-lg-4 py-3">
+            <div class="card card-hover shadow-sm">
+              <div class="card-body">
+                <h4 class="card-title mb-3">
+                  <span class="span-icon card-icon-holder icon-theme me-2"><i class="fa-duotone fa-lightbulb-on"></i></span> <span class="card-title-text">亮點論壇</span>
+                </h4>
+                <div class="card-text">
+                  <p>需要更多幫助？問社區。</p>
+                </div>
+                <a class="card-link-mask" href="https://community.brightcove.com/s/"></a>
+              </div><!--//card-body-->
+            </div><!--//card-->         
+          </div><!--//col-->
+  
+        </div>
+      </div>
+    </div> 
   </div>
-</footer>
-<div id="talla_wrapper">
-  <p style="text-align: right;position: relative;"><button style="background:rgb(7, 9, 140);color:Snow;padding:.3rem;position:fixed;right:0;bottom:1em;z-index:9999999" onclick="javascript:displayChat()">有問題嗎？ </button> </p>
-  <div id="talla_chat">
+
+  <br/> <br/>
+
+  <!-- CONTACT SUPPORT SECTION -->
+  <div class="text-center">
+    <h4>聯繫我們的支持團隊</h4>
+    <a href="https://supportportal.brightcove.com/s/login/?language=en_US&amp;ec=302&amp;startURL=%2Fs%2F" class="btn btn-secondary">聯絡支援</a>
+  </div>
+
+</div>
+
+
+
 </div>
 </div>
-<script>
+</div>
+<div class="page-content" style="background-color: rgb(1, 5, 14);">
+  <div class="container" style="width: 50%;">
+    <footer class="py-5">
+      <div class="row">
+        <div class="col-6 col-md">
+          <h5 class="h5-text">布萊特灣支援</h5>
+          <ul class="list-unstyled text-small" style="color: white ;">
+            <li><a class="a-text" href="https://status.brightcove.com">系統狀態</a></li>
+            <li><a class="a-text" href="https://supportportal.brightcove.com">聯絡支援</a></li>
+            <li><a class="a-text" href="https://support.brightcove.com/search.html">搜索所有文檔</a></li>
+          </ul>
+        </div>
+      
+        <div class="col-6 col-md">
+          <h5 class="h5-text">訓練</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="a-text" href="https://studio.support.brightcove.com/get-started/training/online-training-courses.html">在線課程</a></li>
+            <li><a class="a-text" href="https://studio.support.brightcove.com/get-started/training/register-training.html">註冊課程</a></li>
+            <li><a class="a-text" href="https://academy.brightcove.com/">光明灣學院</a></li>
+          </ul>
+        </div>
+      
+        <div class="col-6 col-md">
+          <h5 class="h5-text">Brightcove</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="a-text" href="https://www.brightcove.com">亮麗</a></li>
+            <li><a class="a-text" href="https://community.brightcove.com/s/">亮點社區論壇</a></li>
+            <li><a class="a-text" href="https://support.brightcove.com/product-updates.html">產品發布說明</a></li>
+            <li><a class="a-text" href="https://support.brightcove.com/doc-updates.html">文檔更新</a></li>
+          </ul>
+        </div>
+      </div>
+    
+      <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+      <p>© Brightcove Inc. 保留所有權利。</p>
+      <a class="a-text" href="https://www.brightcove.com/en/legal/privacy">隱私</a> <a class="a-text" href="https://www.brightcove.com/en/terms-and-conditions">條款 &amp; 狀況</a>
+
+      <ul class="list-unstyled d-flex">
+        <li class="ms-3"><a href="https://www.linkedin.com/company/16439" title="LinkedIn" target="_blank" class="gf-social-linkedin" style="margin-right: 1rem;"><i data-feather="linkedin" style="color:#8E9093;height: 1.25rem;"></i></a></li>
+
+        <li class="ms-3"><a href="https://twitter.com/brightcove" title="Twitter" target="_blank" class="gf-social-twitter" style="margin-right: 1rem;"><i data-feather="twitter" style="color:#8E9093;height: 1.25rem;"></i></a></li>
+
+        <li class="ms-3"><a href="https://www.facebook.com/Brightcove" title="Facebook" target="_blank" class="gf-social-facebook"><i data-feather="facebook" style="color:#8E9093;height: 1.25rem;"></i></a></li>
+      </ul>
+      </div>
+    </footer>
+  </div>
+</div>
+
+<script translate="no">
       
   var searchBox = sajari.init({
     mode: "search-box",
     project: "1588255093746585379", // Set this to your project.
-    collection: "brightcove-documenation", // Set this to your collection.
+    collection: "brightcove-documentation", // Set this to your collection.
     instantPipeline: "autocomplete", // Pipeline used as you type
-    inputPlaceholder: "Search", // Input element placeholder
+    inputPlaceholder: "Search", // Input element placeholder,
+    styling: {
+      components: {
+        
+        input: {
+          container: {
+          backgroundColor: 'white',
+          }
+        
+        }
+      }
+    },
     maxSuggestions: 5, // Maximum number of suggestions to show
-    attachSearchBox: document.getElementById("nav-search-box") // DOM element to attach to
+      attachSearchBox: document.getElementById("nav-search-box") // DOM element to attach to
   });
+
   
+
+
     searchBox("sub", "pipeline.search-sent", function (_, query) {
-      window.location = "/search.html?q=" + encodeURIComponent(query.q);
+    window.location = "/search.html?q=" + encodeURIComponent(query.q);
     });
   
-
-</script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  <script src="https://support.brightcove.com/site-assets/js/site/https-fix.js"></script>
-  <script src="https://support.brightcove.com/site-assets/js/site/setDate.js"></script>
+  </script>
   
-  <script src="https://support.brightcove.com/site-assets/js/site/prism.js"></script>
-  
-  <script src="https://support.brightcove.com/site-assets/js/site/site.js"></script>
-  <script src="https://support.brightcove.com/site-assets/js/site/tabs.js"></script>
-  <!-- <script src="https://support.brightcove.com/site-assets/js/site/toc.js"></script> -->
-  <script src="/assets/js/sites_nav.js"></script>
-  <script src="https://support.brightcove.com/site-assets/js/site/bcls-utils.js"></script>
-  <script src="https://support.brightcove.com/site-assets/js/site/local-link-fix.js"></script>
-  <script src="/assets/js/feedback.js"></script>
-  
-  <script src="/assets/js/sajari-search-foot.js"></script>
-  
-  <!-- <script src="/assets/js/sajari-index.js"></script> -->
-  <style>
-    a.sj-paginator__page-number.sj-paginator__page-number--current.css-so0ov7 {
-      background-color: lightblue;
-    }
-    div.sj-tabs__tab {
-      margin-top: 3rem;
-      margin-left: .3rem;
-      border-top-left-radius: .4rem;
-      border-top-right-radius: .4rem;
-      background-color:#e8e8e8;
-    }
+    <!-- Javascript -->          
+    <script src="/assets/s-site-assets-template-stylesheets/plugins/popper.min.js"></script>
+    <script src="/assets/s-site-assets-template-stylesheets/plugins/bootstrap/js/bootstrap.min.js"></script>  
+    
+    <!-- Page Specific JS -->
+    <script src="/assets/s-site-assets-template-stylesheets/plugins/smoothscroll.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+    <script src="/assets/s-site-assets-template-stylesheets/js/highlight-custom.js"></script> 
+    <script src="/assets/s-site-assets-template-stylesheets/plugins/simplelightbox/simple-lightbox.min.js"></script>      
+    <script src="/assets/s-site-assets-template-stylesheets/plugins/gumshoe/gumshoe.polyfills.min.js"></script> 
+    <script src="/assets/s-site-assets-template-stylesheets/js/docs.js"></script> 
+    
+    <!-- original footer components -->
 
-    div.sj-tabs__tab.sj-tabs__tab--selected {
-      border-bottom-color: crimson;
-      background-color: #f8f8f8;
-    }
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    
+    <script src="/assets/s-site-assets-scripts/https-fix.js"></script>
+    <script src="/assets/s-site-assets-scripts/setDate.js"></script>
+    <script src="/assets/s-site-assets-scripts/selector.js"></script>
+    
+    <script src="/assets/s-site-assets-scripts/prism.js"></script>
+    
+    <script src="/assets/s-site-assets-scripts/site.js"></script>
+    <script src="https://support.brightcove.com/site-assets/js/learning-paths/learning-paths.js"></script>
+    <!-- <script src="/assets/s-site-assets-scripts/site.js"></script> -->
+    <script src="/assets/s-site-assets-scripts/tabs.js"></script>
+    <!-- <script src="/assets/s-site-assets-scripts/hide-nav.js"></script> -->
+    <script src="/assets/js/sites_nav.js"></script>
+    <script src="/assets/s-site-assets-scripts/bcls-utils.js"></script>
+    <script src="/assets/s-site-assets-scripts/local-link-fix.js"></script>
+    <script src="/assets/s-site-assets-scripts/sajari-reindex.js"></script>
+    <script src="/assets/js/feedback.js"></script>
+    
+    <script src="/assets/s-site-assets-scripts/sajari-search-foot.js"></script>
+    
+    <script translate="no">
+      feather.replace()
+    </script>
+    <!-- <script src="/assets/js/sajari-index.js"></script> -->
+    <script src="/assets/s-site-assets-scripts/in-app.js"></script>
+    <style translate="no">
+      a.sj-paginator__page-number.sj-paginator__page-number--current.css-so0ov7 {
+        background-color: lightblue;
+      }
+      div.sj-tabs__tab {
+        margin-top: 3rem;
+        margin-left: .3rem;
+        border-top-left-radius: .4rem;
+        border-top-right-radius: .4rem;
+        background-color:#e8e8e8;
+      }
 
-    p.sj-results__result__description.css-p9jvyt {
-      font-size: 1rem;
-    }
+      div.sj-tabs__tab.sj-tabs__tab--selected {
+        border-bottom-color: crimson;
+        background-color: #f8f8f8;
+      }
 
-    .sj-result__text.css-31l7gp h3 {
-      color: navy;
-      font-size: 1.4rem;
-    }
-    </style>
+      p.sj-results__result__description.css-p9jvyt {
+        font-size: 1rem;
+      }
 
-</body>
+      .sj-result__text.css-31l7gp h3 {
+        color: navy;
+        font-size: 1.4rem;
+      }
+      </style>
 
-</html>
+  </body>
+</html> 
